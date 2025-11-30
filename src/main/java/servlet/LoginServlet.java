@@ -53,6 +53,9 @@ public class LoginServlet extends HttpServlet {
 				session.removeAttribute(AuthFilter.SECURITY_URI);
 				resp.sendRedirect(securityUri);
 				return;
+			} else {
+				resp.sendRedirect(req.getContextPath() + "/video/list");
+				return;
 			}
 		}
 		req.getRequestDispatcher("/login.jsp").forward(req, resp);

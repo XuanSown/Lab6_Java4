@@ -20,6 +20,6 @@ public class AdminServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		req.setAttribute("message", "Trang Admin! URL: " + req.getRequestURI());
-		req.getRequestDispatcher("page.jsp").forward(req, resp);
+		req.getRequestDispatcher("/page.jsp").forward(req, resp);
 	}
 }

@@ -8,10 +8,12 @@ import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
+import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
+@WebFilter({ "/admin/*", "/account/change-password", "/account/edit-profile", "/video/like/*", "/video/share/*" })
 public class AuthFilter implements Filter {
 	// lưu đuòng dẫn người dùng muốn vào trước khi bị chặn
 	public static final String SECURITY_URI = "securityUri";
